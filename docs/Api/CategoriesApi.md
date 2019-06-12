@@ -1,4 +1,4 @@
-# Jetract\CategoriesApi
+# Swagger\Client\CategoriesApi
 
 All URIs are relative to *https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **deleteCategory**
-> \Jetract\Model\JStatus deleteCategory($categoryID, $empty)
+> \Swagger\Client\Model\JStatus deleteCategory($user_id, $category_id, $company_id, $x_api_key)
 
 
 
@@ -24,21 +24,23 @@ This function will delete a given category.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\CategoriesApi(
+$apiInstance = new Swagger\Client\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$categoryID = "categoryID_example"; // string | 
-$empty = new \Jetract\Model\ModelEmpty(); // \Jetract\Model\ModelEmpty | 
+$user_id = "user_id_example"; // string | 
+$category_id = "category_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
 
 try {
-    $result = $apiInstance->deleteCategory($categoryID, $empty);
+    $result = $apiInstance->deleteCategory($user_id, $category_id, $company_id, $x_api_key);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoriesApi->deleteCategory: ', $e->getMessage(), PHP_EOL;
@@ -50,12 +52,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryID** | **string**|  |
- **empty** | [**\Jetract\Model\ModelEmpty**](../Model/ModelEmpty.md)|  |
+ **user_id** | **string**|  |
+ **category_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
 
 ### Return type
 
-[**\Jetract\Model\JStatus**](../Model/JStatus.md)
+[**\Swagger\Client\Model\JStatus**](../Model/JStatus.md)
 
 ### Authorization
 
@@ -63,13 +67,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCategories**
-> \Jetract\Model\CategoriesResponse getCategories($companyID)
+> \Swagger\Client\Model\CategoriesResponse getCategories($user_id, $company_id, $x_api_key)
 
 
 
@@ -81,20 +85,22 @@ This function will return all Categories.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\CategoriesApi(
+$apiInstance = new Swagger\Client\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$companyID = "companyID_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
 
 try {
-    $result = $apiInstance->getCategories($companyID);
+    $result = $apiInstance->getCategories($user_id, $company_id, $x_api_key);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoriesApi->getCategories: ', $e->getMessage(), PHP_EOL;
@@ -106,11 +112,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyID** | **string**|  |
+ **user_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
 
 ### Return type
 
-[**\Jetract\Model\CategoriesResponse**](../Model/CategoriesResponse.md)
+[**\Swagger\Client\Model\CategoriesResponse**](../Model/CategoriesResponse.md)
 
 ### Authorization
 
@@ -124,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCategory**
-> \Jetract\Model\CategoryResponse getCategory($categoryID, $companyID)
+> \Swagger\Client\Model\CategoryResponse getCategory($user_id, $category_id, $company_id, $x_api_key)
 
 
 
@@ -136,21 +144,23 @@ This function will return the details of a given category.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\CategoriesApi(
+$apiInstance = new Swagger\Client\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$categoryID = "categoryID_example"; // string | 
-$companyID = "companyID_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$category_id = "category_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
 
 try {
-    $result = $apiInstance->getCategory($categoryID, $companyID);
+    $result = $apiInstance->getCategory($user_id, $category_id, $company_id, $x_api_key);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoriesApi->getCategory: ', $e->getMessage(), PHP_EOL;
@@ -162,12 +172,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryID** | **string**|  |
- **companyID** | **string**|  |
+ **user_id** | **string**|  |
+ **category_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
 
 ### Return type
 
-[**\Jetract\Model\CategoryResponse**](../Model/CategoryResponse.md)
+[**\Swagger\Client\Model\CategoryResponse**](../Model/CategoryResponse.md)
 
 ### Authorization
 
@@ -181,7 +193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **newCategory**
-> \Jetract\Model\JResponseID newCategory($companyID, $categoryNew)
+> \Swagger\Client\Model\JResponseID newCategory($user_id, $company_id, $x_api_key, $category_new)
 
 
 
@@ -193,21 +205,23 @@ This function will create a new category for a given company.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\CategoriesApi(
+$apiInstance = new Swagger\Client\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$companyID = "companyID_example"; // string | 
-$categoryNew = new \Jetract\Model\CategoryNew(); // \Jetract\Model\CategoryNew | 
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$category_new = new \Swagger\Client\Model\CategoryNew(); // \Swagger\Client\Model\CategoryNew | 
 
 try {
-    $result = $apiInstance->newCategory($companyID, $categoryNew);
+    $result = $apiInstance->newCategory($user_id, $company_id, $x_api_key, $category_new);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoriesApi->newCategory: ', $e->getMessage(), PHP_EOL;
@@ -219,12 +233,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyID** | **string**|  |
- **categoryNew** | [**\Jetract\Model\CategoryNew**](../Model/CategoryNew.md)|  |
+ **user_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **category_new** | [**\Swagger\Client\Model\CategoryNew**](../Model/CategoryNew.md)|  |
 
 ### Return type
 
-[**\Jetract\Model\JResponseID**](../Model/JResponseID.md)
+[**\Swagger\Client\Model\JResponseID**](../Model/JResponseID.md)
 
 ### Authorization
 
@@ -238,7 +254,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateCategory**
-> \Jetract\Model\JStatus updateCategory($categoryID, $categoryUpdate)
+> \Swagger\Client\Model\JStatus updateCategory($user_id, $category_id, $company_id, $x_api_key, $category_update)
 
 
 
@@ -250,21 +266,24 @@ This function will update a given category.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\CategoriesApi(
+$apiInstance = new Swagger\Client\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$categoryID = "categoryID_example"; // string | 
-$categoryUpdate = new \Jetract\Model\CategoryUpdate(); // \Jetract\Model\CategoryUpdate | 
+$user_id = "user_id_example"; // string | 
+$category_id = "category_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$category_update = new \Swagger\Client\Model\CategoryUpdate(); // \Swagger\Client\Model\CategoryUpdate | 
 
 try {
-    $result = $apiInstance->updateCategory($categoryID, $categoryUpdate);
+    $result = $apiInstance->updateCategory($user_id, $category_id, $company_id, $x_api_key, $category_update);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoriesApi->updateCategory: ', $e->getMessage(), PHP_EOL;
@@ -276,12 +295,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryID** | **string**|  |
- **categoryUpdate** | [**\Jetract\Model\CategoryUpdate**](../Model/CategoryUpdate.md)|  |
+ **user_id** | **string**|  |
+ **category_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **category_update** | [**\Swagger\Client\Model\CategoryUpdate**](../Model/CategoryUpdate.md)|  |
 
 ### Return type
 
-[**\Jetract\Model\JStatus**](../Model/JStatus.md)
+[**\Swagger\Client\Model\JStatus**](../Model/JStatus.md)
 
 ### Authorization
 

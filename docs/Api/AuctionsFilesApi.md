@@ -1,4 +1,4 @@
-# Jetract\AuctionsFilesApi
+# Swagger\Client\AuctionsFilesApi
 
 All URIs are relative to *https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **deleteAuctionFile**
-> \Jetract\Model\JStatus deleteAuctionFile($auctionID, $companyID)
+> \Swagger\Client\Model\JStatus deleteAuctionFile($user_id, $auction_id, $company_id, $x_api_key, $auction_delete_file)
 
 
 
@@ -21,21 +21,24 @@ This function will remove a file from Auction Files.<br>Bidders will no longer b
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AuctionsFilesApi(
+$apiInstance = new Swagger\Client\Api\AuctionsFilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$auctionID = "auctionID_example"; // string | 
-$companyID = "companyID_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$auction_id = "auction_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$auction_delete_file = new \Swagger\Client\Model\AuctionDeleteFile(); // \Swagger\Client\Model\AuctionDeleteFile | 
 
 try {
-    $result = $apiInstance->deleteAuctionFile($auctionID, $companyID);
+    $result = $apiInstance->deleteAuctionFile($user_id, $auction_id, $company_id, $x_api_key, $auction_delete_file);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuctionsFilesApi->deleteAuctionFile: ', $e->getMessage(), PHP_EOL;
@@ -47,12 +50,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auctionID** | **string**|  |
- **companyID** | **string**|  |
+ **user_id** | **string**|  |
+ **auction_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **auction_delete_file** | [**\Swagger\Client\Model\AuctionDeleteFile**](../Model/AuctionDeleteFile.md)|  |
 
 ### Return type
 
-[**\Jetract\Model\JStatus**](../Model/JStatus.md)
+[**\Swagger\Client\Model\JStatus**](../Model/JStatus.md)
 
 ### Authorization
 
@@ -66,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **newAuctionFile**
-> \Jetract\Model\JStatus newAuctionFile($auctionID, $companyID, $auctionAttachFiles)
+> \Swagger\Client\Model\JStatus newAuctionFile($user_id, $auction_id, $company_id, $x_api_key, $auction_attach_files)
 
 
 
@@ -78,22 +84,24 @@ This function will add a new file to auction files. Bidders will be able to see 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AuctionsFilesApi(
+$apiInstance = new Swagger\Client\Api\AuctionsFilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$auctionID = "auctionID_example"; // string | 
-$companyID = "companyID_example"; // string | 
-$auctionAttachFiles = new \Jetract\Model\AuctionAttachFiles(); // \Jetract\Model\AuctionAttachFiles | 
+$user_id = "user_id_example"; // string | 
+$auction_id = "auction_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$auction_attach_files = new \Swagger\Client\Model\AuctionAttachFiles(); // \Swagger\Client\Model\AuctionAttachFiles | 
 
 try {
-    $result = $apiInstance->newAuctionFile($auctionID, $companyID, $auctionAttachFiles);
+    $result = $apiInstance->newAuctionFile($user_id, $auction_id, $company_id, $x_api_key, $auction_attach_files);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuctionsFilesApi->newAuctionFile: ', $e->getMessage(), PHP_EOL;
@@ -105,13 +113,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auctionID** | **string**|  |
- **companyID** | **string**|  |
- **auctionAttachFiles** | [**\Jetract\Model\AuctionAttachFiles**](../Model/AuctionAttachFiles.md)|  |
+ **user_id** | **string**|  |
+ **auction_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **auction_attach_files** | [**\Swagger\Client\Model\AuctionAttachFiles**](../Model/AuctionAttachFiles.md)|  |
 
 ### Return type
 
-[**\Jetract\Model\JStatus**](../Model/JStatus.md)
+[**\Swagger\Client\Model\JStatus**](../Model/JStatus.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Jetract\AuctionsStagesApi
+# Swagger\Client\AuctionsStagesApi
 
 All URIs are relative to *https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **deleteAuctionStage**
-> \Jetract\Model\JStatus deleteAuctionStage($auctionID, $auctionStageDelete, $companyID)
+> \Swagger\Client\Model\JStatus deleteAuctionStage($user_id, $auction_id, $company_id, $x_api_key, $auction_stage_delete)
 
 
 
@@ -23,22 +23,24 @@ This function will delete a stage from a given auction.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AuctionsStagesApi(
+$apiInstance = new Swagger\Client\Api\AuctionsStagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$auctionID = "auctionID_example"; // string | 
-$auctionStageDelete = new \Jetract\Model\AuctionStageDelete(); // \Jetract\Model\AuctionStageDelete | 
-$companyID = "companyID_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$auction_id = "auction_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$auction_stage_delete = new \Swagger\Client\Model\AuctionStageDelete(); // \Swagger\Client\Model\AuctionStageDelete | 
 
 try {
-    $result = $apiInstance->deleteAuctionStage($auctionID, $auctionStageDelete, $companyID);
+    $result = $apiInstance->deleteAuctionStage($user_id, $auction_id, $company_id, $x_api_key, $auction_stage_delete);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuctionsStagesApi->deleteAuctionStage: ', $e->getMessage(), PHP_EOL;
@@ -50,13 +52,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auctionID** | **string**|  |
- **auctionStageDelete** | [**\Jetract\Model\AuctionStageDelete**](../Model/AuctionStageDelete.md)|  |
- **companyID** | **string**|  | [optional]
+ **user_id** | **string**|  |
+ **auction_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **auction_stage_delete** | [**\Swagger\Client\Model\AuctionStageDelete**](../Model/AuctionStageDelete.md)|  |
 
 ### Return type
 
-[**\Jetract\Model\JStatus**](../Model/JStatus.md)
+[**\Swagger\Client\Model\JStatus**](../Model/JStatus.md)
 
 ### Authorization
 
@@ -70,7 +74,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **endAuctionStage**
-> \Jetract\Model\JStatus endAuctionStage($auctionID, $companyID, $auctionStageEnd)
+> \Swagger\Client\Model\JStatus endAuctionStage($user_id, $auction_id, $company_id, $x_api_key, $auction_stage_end)
 
 
 
@@ -82,22 +86,24 @@ This function will terminate a stage from a given auction.<br>Warning!!! Only us
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AuctionsStagesApi(
+$apiInstance = new Swagger\Client\Api\AuctionsStagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$auctionID = "auctionID_example"; // string | 
-$companyID = "companyID_example"; // string | 
-$auctionStageEnd = new \Jetract\Model\AuctionStageEnd(); // \Jetract\Model\AuctionStageEnd | 
+$user_id = "user_id_example"; // string | 
+$auction_id = "auction_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$auction_stage_end = new \Swagger\Client\Model\AuctionStageEnd(); // \Swagger\Client\Model\AuctionStageEnd | 
 
 try {
-    $result = $apiInstance->endAuctionStage($auctionID, $companyID, $auctionStageEnd);
+    $result = $apiInstance->endAuctionStage($user_id, $auction_id, $company_id, $x_api_key, $auction_stage_end);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuctionsStagesApi->endAuctionStage: ', $e->getMessage(), PHP_EOL;
@@ -109,13 +115,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auctionID** | **string**|  |
- **companyID** | **string**|  |
- **auctionStageEnd** | [**\Jetract\Model\AuctionStageEnd**](../Model/AuctionStageEnd.md)|  |
+ **user_id** | **string**|  |
+ **auction_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **auction_stage_end** | [**\Swagger\Client\Model\AuctionStageEnd**](../Model/AuctionStageEnd.md)|  |
 
 ### Return type
 
-[**\Jetract\Model\JStatus**](../Model/JStatus.md)
+[**\Swagger\Client\Model\JStatus**](../Model/JStatus.md)
 
 ### Authorization
 
@@ -129,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **newAuctionStage**
-> \Jetract\Model\JResponseID newAuctionStage($auctionID, $companyID)
+> \Swagger\Client\Model\JResponseID newAuctionStage($auction_id, $company_id)
 
 
 
@@ -141,21 +149,21 @@ This function will create a new stage to a given auction.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AuctionsStagesApi(
+$apiInstance = new Swagger\Client\Api\AuctionsStagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$auctionID = "auctionID_example"; // string | 
-$companyID = "companyID_example"; // string | 
+$auction_id = "auction_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
 
 try {
-    $result = $apiInstance->newAuctionStage($auctionID, $companyID);
+    $result = $apiInstance->newAuctionStage($auction_id, $company_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuctionsStagesApi->newAuctionStage: ', $e->getMessage(), PHP_EOL;
@@ -167,12 +175,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auctionID** | **string**|  |
- **companyID** | **string**|  |
+ **auction_id** | **string**|  |
+ **company_id** | **string**|  |
 
 ### Return type
 
-[**\Jetract\Model\JResponseID**](../Model/JResponseID.md)
+[**\Swagger\Client\Model\JResponseID**](../Model/JResponseID.md)
 
 ### Authorization
 
@@ -186,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **startAuctionStage**
-> \Jetract\Model\JStatus startAuctionStage($auctionID, $companyID)
+> \Swagger\Client\Model\JStatus startAuctionStage($user_id, $auction_id, $company_id, $x_api_key)
 
 
 
@@ -198,21 +206,23 @@ This function will start a stage for a given auction.<br>Warning!!!Only use at S
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AuctionsStagesApi(
+$apiInstance = new Swagger\Client\Api\AuctionsStagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$auctionID = "auctionID_example"; // string | 
-$companyID = "companyID_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$auction_id = "auction_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
 
 try {
-    $result = $apiInstance->startAuctionStage($auctionID, $companyID);
+    $result = $apiInstance->startAuctionStage($user_id, $auction_id, $company_id, $x_api_key);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuctionsStagesApi->startAuctionStage: ', $e->getMessage(), PHP_EOL;
@@ -224,12 +234,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auctionID** | **string**|  |
- **companyID** | **string**|  |
+ **user_id** | **string**|  |
+ **auction_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
 
 ### Return type
 
-[**\Jetract\Model\JStatus**](../Model/JStatus.md)
+[**\Swagger\Client\Model\JStatus**](../Model/JStatus.md)
 
 ### Authorization
 

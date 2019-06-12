@@ -1,4 +1,4 @@
-# Jetract\AuctionsBiddersApi
+# Swagger\Client\AuctionsBiddersApi
 
 All URIs are relative to *https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **addBidder**
-> \Jetract\Model\JStatus addBidder($auctionID, $companyID, $auctionAttachBidder)
+> \Swagger\Client\Model\JStatus addBidder($user_id, $auction_id, $company_id, $x_api_key, $auction_attach_bidder)
 
 
 
@@ -20,22 +20,24 @@ This function will return the bidders of a given auction.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AuctionsBiddersApi(
+$apiInstance = new Swagger\Client\Api\AuctionsBiddersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$auctionID = "auctionID_example"; // string | 
-$companyID = "companyID_example"; // string | 
-$auctionAttachBidder = new \Jetract\Model\AuctionAttachBidder(); // \Jetract\Model\AuctionAttachBidder | 
+$user_id = "user_id_example"; // string | 
+$auction_id = "auction_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$auction_attach_bidder = new \Swagger\Client\Model\AuctionAttachBidder(); // \Swagger\Client\Model\AuctionAttachBidder | 
 
 try {
-    $result = $apiInstance->addBidder($auctionID, $companyID, $auctionAttachBidder);
+    $result = $apiInstance->addBidder($user_id, $auction_id, $company_id, $x_api_key, $auction_attach_bidder);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuctionsBiddersApi->addBidder: ', $e->getMessage(), PHP_EOL;
@@ -47,13 +49,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auctionID** | **string**|  |
- **companyID** | **string**|  |
- **auctionAttachBidder** | [**\Jetract\Model\AuctionAttachBidder**](../Model/AuctionAttachBidder.md)|  |
+ **user_id** | **string**|  |
+ **auction_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **auction_attach_bidder** | [**\Swagger\Client\Model\AuctionAttachBidder**](../Model/AuctionAttachBidder.md)|  |
 
 ### Return type
 
-[**\Jetract\Model\JStatus**](../Model/JStatus.md)
+[**\Swagger\Client\Model\JStatus**](../Model/JStatus.md)
 
 ### Authorization
 

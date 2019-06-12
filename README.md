@@ -42,20 +42,22 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AddressesApi(
+$apiInstance = new Swagger\Client\Api\AddressesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$companyID = "companyID_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
 
 try {
-    $result = $apiInstance->getAddresses($companyID);
+    $result = $apiInstance->getAddresses($user_id, $company_id, $x_api_key);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AddressesApi->getAddresses: ', $e->getMessage(), PHP_EOL;
@@ -82,10 +84,7 @@ Class | Method | HTTP request | Description
 *AuctionsApi* | [**startAuction**](docs/Api/AuctionsApi.md#startauction) | **POST** /auctions/start/{auctionID} | 
 *AuctionsApi* | [**updateAuction**](docs/Api/AuctionsApi.md#updateauction) | **PUT** /auctions/{auctionID} | 
 *AuctionsAnnouncementsApi* | [**getAnnouncements**](docs/Api/AuctionsAnnouncementsApi.md#getannouncements) | **GET** /auctions/announcements/{auctionID} | 
-*AuctionsAnnouncementsApi* | [**newAnnouncement**](docs/Api/AuctionsAnnouncementsApi.md#newannouncement) | **POST** /auctions/announcements/{auctionID} | 
 *AuctionsBiddersApi* | [**addBidder**](docs/Api/AuctionsBiddersApi.md#addbidder) | **POST** /auctions/bidders/{auctionID} | 
-*AuctionsDurationApi* | [**changeAutoExtend**](docs/Api/AuctionsDurationApi.md#changeautoextend) | **POST** /auctions/duration/autoExtend/{auctionID} | 
-*AuctionsDurationApi* | [**extend**](docs/Api/AuctionsDurationApi.md#extend) | **POST** /auctions/duration/extend/{auctionID} | 
 *AuctionsFilesApi* | [**deleteAuctionFile**](docs/Api/AuctionsFilesApi.md#deleteauctionfile) | **DELETE** /auctions/files/{auctionID} | 
 *AuctionsFilesApi* | [**newAuctionFile**](docs/Api/AuctionsFilesApi.md#newauctionfile) | **POST** /auctions/files/{auctionID} | 
 *AuctionsOffersApi* | [**deleteOffer**](docs/Api/AuctionsOffersApi.md#deleteoffer) | **DELETE** /auctions/offers/{auctionID} | 
@@ -110,6 +109,10 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**newCategory**](docs/Api/CategoriesApi.md#newcategory) | **POST** /categories | 
 *CategoriesApi* | [**updateCategory**](docs/Api/CategoriesApi.md#updatecategory) | **PUT** /categories/{categoryID} | 
 *CountriesApi* | [**getCountries**](docs/Api/CountriesApi.md#getcountries) | **GET** /addresses/countries | 
+*DefaultApi* | [**auctionsBiddersAgreementsResetAuctionIDPost**](docs/Api/DefaultApi.md#auctionsbiddersagreementsresetauctionidpost) | **POST** /auctions/bidders/agreements/reset/{auctionID} | 
+*DefaultApi* | [**bidderAuctionsAuctionIDGet**](docs/Api/DefaultApi.md#bidderauctionsauctionidget) | **GET** /bidder/auctions/{auctionID} | 
+*DefaultApi* | [**bidderAuctionsGet**](docs/Api/DefaultApi.md#bidderauctionsget) | **GET** /bidder/auctions | 
+*DefaultApi* | [**rootGet**](docs/Api/DefaultApi.md#rootget) | **GET** / | 
 *FilesApi* | [**download**](docs/Api/FilesApi.md#download) | **GET** /files/{fileID} | 
 *FilesApi* | [**upload**](docs/Api/FilesApi.md#upload) | **POST** /files | 
 
@@ -125,41 +128,80 @@ Class | Method | HTTP request | Description
  - [AddressesResponseCity](docs/Model/AddressesResponseCity.md)
  - [AddressesResponseCountry](docs/Model/AddressesResponseCountry.md)
  - [AddressesResponseData](docs/Model/AddressesResponseData.md)
- - [AuctionAnnouncementNew](docs/Model/AuctionAnnouncementNew.md)
+ - [AuctionAddressResponse](docs/Model/AuctionAddressResponse.md)
+ - [AuctionAddressResponseCity](docs/Model/AuctionAddressResponseCity.md)
+ - [AuctionAddressResponseCountry](docs/Model/AuctionAddressResponseCountry.md)
  - [AuctionAnnouncementResponse](docs/Model/AuctionAnnouncementResponse.md)
  - [AuctionAnnouncementsResponse](docs/Model/AuctionAnnouncementsResponse.md)
  - [AuctionAttachBidder](docs/Model/AuctionAttachBidder.md)
  - [AuctionAttachFiles](docs/Model/AuctionAttachFiles.md)
- - [AuctionAttachFilesFiles](docs/Model/AuctionAttachFilesFiles.md)
- - [AuctionAutoTimeExtension](docs/Model/AuctionAutoTimeExtension.md)
+ - [AuctionBestBidderResponse](docs/Model/AuctionBestBidderResponse.md)
+ - [AuctionBidderAgreementReset](docs/Model/AuctionBidderAgreementReset.md)
+ - [AuctionBidderGroupResponse](docs/Model/AuctionBidderGroupResponse.md)
+ - [AuctionBidderResponse](docs/Model/AuctionBidderResponse.md)
+ - [AuctionBidderResponseFiles](docs/Model/AuctionBidderResponseFiles.md)
+ - [AuctionConditionResponse](docs/Model/AuctionConditionResponse.md)
+ - [AuctionConditionResponseBidder](docs/Model/AuctionConditionResponseBidder.md)
+ - [AuctionConditionResponseBidderCompany](docs/Model/AuctionConditionResponseBidderCompany.md)
+ - [AuctionConditionResponseValues](docs/Model/AuctionConditionResponseValues.md)
+ - [AuctionDeleteFile](docs/Model/AuctionDeleteFile.md)
  - [AuctionDeleteOffer](docs/Model/AuctionDeleteOffer.md)
- - [AuctionExtendDuration](docs/Model/AuctionExtendDuration.md)
  - [AuctionInformationResponse](docs/Model/AuctionInformationResponse.md)
- - [AuctionInformationResponseApprovalProcess](docs/Model/AuctionInformationResponseApprovalProcess.md)
- - [AuctionInformationResponseAutoTimeExtension](docs/Model/AuctionInformationResponseAutoTimeExtension.md)
- - [AuctionInformationResponseCreator](docs/Model/AuctionInformationResponseCreator.md)
- - [AuctionInformationResponseDepartment](docs/Model/AuctionInformationResponseDepartment.md)
- - [AuctionInformationResponseReminder](docs/Model/AuctionInformationResponseReminder.md)
+ - [AuctionItemResponse](docs/Model/AuctionItemResponse.md)
+ - [AuctionItemResponseCategory](docs/Model/AuctionItemResponseCategory.md)
+ - [AuctionItemResponseProduct](docs/Model/AuctionItemResponseProduct.md)
  - [AuctionNew](docs/Model/AuctionNew.md)
  - [AuctionNewAuctionConditions](docs/Model/AuctionNewAuctionConditions.md)
  - [AuctionNewAuctionItems](docs/Model/AuctionNewAuctionItems.md)
  - [AuctionNewAutoTimeExtension](docs/Model/AuctionNewAutoTimeExtension.md)
  - [AuctionNewBidderGroups](docs/Model/AuctionNewBidderGroups.md)
  - [AuctionNewBidders](docs/Model/AuctionNewBidders.md)
+ - [AuctionNewChangeAmounts](docs/Model/AuctionNewChangeAmounts.md)
+ - [AuctionNewFiles](docs/Model/AuctionNewFiles.md)
  - [AuctionNewReminder](docs/Model/AuctionNewReminder.md)
+ - [AuctionOfferItemResponse](docs/Model/AuctionOfferItemResponse.md)
+ - [AuctionOfferItemResponseItem](docs/Model/AuctionOfferItemResponseItem.md)
+ - [AuctionOfferResponse](docs/Model/AuctionOfferResponse.md)
+ - [AuctionOfferResponseBidder](docs/Model/AuctionOfferResponseBidder.md)
+ - [AuctionOfferResponseDeletedOffer](docs/Model/AuctionOfferResponseDeletedOffer.md)
+ - [AuctionOfferResponsePaymentType](docs/Model/AuctionOfferResponsePaymentType.md)
  - [AuctionReportResponse](docs/Model/AuctionReportResponse.md)
  - [AuctionReportResponseData](docs/Model/AuctionReportResponseData.md)
  - [AuctionResponse](docs/Model/AuctionResponse.md)
+ - [AuctionStageBidderResponse](docs/Model/AuctionStageBidderResponse.md)
  - [AuctionStageDelete](docs/Model/AuctionStageDelete.md)
  - [AuctionStageEnd](docs/Model/AuctionStageEnd.md)
  - [AuctionStageEndBidders](docs/Model/AuctionStageEndBidders.md)
+ - [AuctionStageResponse](docs/Model/AuctionStageResponse.md)
+ - [AuctionUpdate](docs/Model/AuctionUpdate.md)
+ - [AuctionUpdateAuctionItems](docs/Model/AuctionUpdateAuctionItems.md)
+ - [AuctionsInformationResponse](docs/Model/AuctionsInformationResponse.md)
+ - [AuctionsInformationResponseApprovalProcess](docs/Model/AuctionsInformationResponseApprovalProcess.md)
+ - [AuctionsInformationResponseAutoTimeExtension](docs/Model/AuctionsInformationResponseAutoTimeExtension.md)
+ - [AuctionsInformationResponseChangeAmounts](docs/Model/AuctionsInformationResponseChangeAmounts.md)
+ - [AuctionsInformationResponseCreator](docs/Model/AuctionsInformationResponseCreator.md)
+ - [AuctionsInformationResponseDepartment](docs/Model/AuctionsInformationResponseDepartment.md)
+ - [AuctionsInformationResponseReminder](docs/Model/AuctionsInformationResponseReminder.md)
  - [AuctionsResponse](docs/Model/AuctionsResponse.md)
+ - [BidderAuctionAnnouncementResponse](docs/Model/BidderAuctionAnnouncementResponse.md)
+ - [BidderAuctionConditionResponse](docs/Model/BidderAuctionConditionResponse.md)
+ - [BidderAuctionInformationResponse](docs/Model/BidderAuctionInformationResponse.md)
+ - [BidderAuctionInformationResponseLowestOffers](docs/Model/BidderAuctionInformationResponseLowestOffers.md)
+ - [BidderAuctionItemResponse](docs/Model/BidderAuctionItemResponse.md)
+ - [BidderAuctionItemResponseLastOffers](docs/Model/BidderAuctionItemResponseLastOffers.md)
+ - [BidderAuctionOfferItemResponse](docs/Model/BidderAuctionOfferItemResponse.md)
+ - [BidderAuctionOfferResponse](docs/Model/BidderAuctionOfferResponse.md)
+ - [BidderAuctionResponse](docs/Model/BidderAuctionResponse.md)
+ - [BidderAuctionsInformationResponse](docs/Model/BidderAuctionsInformationResponse.md)
+ - [BidderAuctionsInformationResponseCompany](docs/Model/BidderAuctionsInformationResponseCompany.md)
+ - [BidderAuctionsResponse](docs/Model/BidderAuctionsResponse.md)
  - [BidderGroupNew](docs/Model/BidderGroupNew.md)
  - [BidderGroupNewBidders](docs/Model/BidderGroupNewBidders.md)
  - [BidderGroupResponse](docs/Model/BidderGroupResponse.md)
  - [BidderGroupsResponse](docs/Model/BidderGroupsResponse.md)
  - [BidderNew](docs/Model/BidderNew.md)
  - [BidderNewCategories](docs/Model/BidderNewCategories.md)
+ - [BidderNewGroups](docs/Model/BidderNewGroups.md)
  - [BidderResponse](docs/Model/BidderResponse.md)
  - [BidderResponseCompany](docs/Model/BidderResponseCompany.md)
  - [BidderResponseCompanyPhone](docs/Model/BidderResponseCompanyPhone.md)

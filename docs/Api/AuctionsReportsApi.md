@@ -1,4 +1,4 @@
-# Jetract\AuctionsReportsApi
+# Swagger\Client\AuctionsReportsApi
 
 All URIs are relative to *https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getExcelReport**
-> \Jetract\Model\AuctionReportResponse getExcelReport($auctionID, $companyID)
+> \Swagger\Client\Model\AuctionReportResponse getExcelReport($user_id, $auction_id, $company_id, $x_api_key)
 
 
 
@@ -20,21 +20,23 @@ This function will generate an excel report of the given auction.<br>Return will
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AuctionsReportsApi(
+$apiInstance = new Swagger\Client\Api\AuctionsReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$auctionID = "auctionID_example"; // string | 
-$companyID = "companyID_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$auction_id = "auction_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
 
 try {
-    $result = $apiInstance->getExcelReport($auctionID, $companyID);
+    $result = $apiInstance->getExcelReport($user_id, $auction_id, $company_id, $x_api_key);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuctionsReportsApi->getExcelReport: ', $e->getMessage(), PHP_EOL;
@@ -46,12 +48,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auctionID** | **string**|  |
- **companyID** | **string**|  |
+ **user_id** | **string**|  |
+ **auction_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
 
 ### Return type
 
-[**\Jetract\Model\AuctionReportResponse**](../Model/AuctionReportResponse.md)
+[**\Swagger\Client\Model\AuctionReportResponse**](../Model/AuctionReportResponse.md)
 
 ### Authorization
 

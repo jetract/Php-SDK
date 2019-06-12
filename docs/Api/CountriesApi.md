@@ -1,4 +1,4 @@
-# Jetract\CountriesApi
+# Swagger\Client\CountriesApi
 
 All URIs are relative to *https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getCountries**
-> \Jetract\Model\AddressCountryResponse getCountries()
+> \Swagger\Client\Model\AddressCountryResponse getCountries($user_id, $company_id, $x_api_key)
 
 
 
@@ -20,19 +20,22 @@ This function will return all countries. Note: Countries are system registered d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\CountriesApi(
+$apiInstance = new Swagger\Client\Api\CountriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
 
 try {
-    $result = $apiInstance->getCountries();
+    $result = $apiInstance->getCountries($user_id, $company_id, $x_api_key);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CountriesApi->getCountries: ', $e->getMessage(), PHP_EOL;
@@ -41,11 +44,16 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
 
 ### Return type
 
-[**\Jetract\Model\AddressCountryResponse**](../Model/AddressCountryResponse.md)
+[**\Swagger\Client\Model\AddressCountryResponse**](../Model/AddressCountryResponse.md)
 
 ### Authorization
 

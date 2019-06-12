@@ -1,4 +1,4 @@
-# Jetract\BiddersGroupsApi
+# Swagger\Client\BiddersGroupsApi
 
 All URIs are relative to *https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **deleteBidderGroup**
-> \Jetract\Model\JStatus deleteBidderGroup($companyID, $groupID)
+> \Swagger\Client\Model\JStatus deleteBidderGroup($user_id, $company_id, $x_api_key, $group_id)
 
 
 
@@ -24,21 +24,23 @@ This function will delete a bidder group from a given company.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\BiddersGroupsApi(
+$apiInstance = new Swagger\Client\Api\BiddersGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$companyID = "companyID_example"; // string | 
-$groupID = "groupID_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$group_id = "group_id_example"; // string | 
 
 try {
-    $result = $apiInstance->deleteBidderGroup($companyID, $groupID);
+    $result = $apiInstance->deleteBidderGroup($user_id, $company_id, $x_api_key, $group_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BiddersGroupsApi->deleteBidderGroup: ', $e->getMessage(), PHP_EOL;
@@ -50,12 +52,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyID** | **string**|  |
- **groupID** | **string**|  |
+ **user_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **group_id** | **string**|  |
 
 ### Return type
 
-[**\Jetract\Model\JStatus**](../Model/JStatus.md)
+[**\Swagger\Client\Model\JStatus**](../Model/JStatus.md)
 
 ### Authorization
 
@@ -69,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBidderGroup**
-> \Jetract\Model\BidderGroupResponse getBidderGroup($companyID, $groupID, $includeBidders)
+> \Swagger\Client\Model\BidderGroupResponse getBidderGroup($user_id, $company_id, $x_api_key, $group_id, $include_bidders)
 
 
 
@@ -81,22 +85,24 @@ This function will return the details of a given bidder group.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\BiddersGroupsApi(
+$apiInstance = new Swagger\Client\Api\BiddersGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$companyID = "companyID_example"; // string | 
-$groupID = "groupID_example"; // string | 
-$includeBidders = "includeBidders_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$group_id = "group_id_example"; // string | 
+$include_bidders = "include_bidders_example"; // string | 
 
 try {
-    $result = $apiInstance->getBidderGroup($companyID, $groupID, $includeBidders);
+    $result = $apiInstance->getBidderGroup($user_id, $company_id, $x_api_key, $group_id, $include_bidders);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BiddersGroupsApi->getBidderGroup: ', $e->getMessage(), PHP_EOL;
@@ -108,13 +114,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyID** | **string**|  |
- **groupID** | **string**|  |
- **includeBidders** | **string**|  | [optional]
+ **user_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **group_id** | **string**|  |
+ **include_bidders** | **string**|  | [optional]
 
 ### Return type
 
-[**\Jetract\Model\BidderGroupResponse**](../Model/BidderGroupResponse.md)
+[**\Swagger\Client\Model\BidderGroupResponse**](../Model/BidderGroupResponse.md)
 
 ### Authorization
 
@@ -128,7 +136,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBidderGroups**
-> \Jetract\Model\BidderGroupsResponse getBidderGroups($companyID, $includeBidders)
+> \Swagger\Client\Model\BidderGroupsResponse getBidderGroups($user_id, $company_id, $x_api_key, $include_bidders)
 
 
 
@@ -140,21 +148,23 @@ This function will return all Bidder Groups of a given company.<br>A bidder grou
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\BiddersGroupsApi(
+$apiInstance = new Swagger\Client\Api\BiddersGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$companyID = "companyID_example"; // string | 
-$includeBidders = "includeBidders_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$include_bidders = "include_bidders_example"; // string | 
 
 try {
-    $result = $apiInstance->getBidderGroups($companyID, $includeBidders);
+    $result = $apiInstance->getBidderGroups($user_id, $company_id, $x_api_key, $include_bidders);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BiddersGroupsApi->getBidderGroups: ', $e->getMessage(), PHP_EOL;
@@ -166,12 +176,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyID** | **string**|  |
- **includeBidders** | **string**|  | [optional]
+ **user_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **include_bidders** | **string**|  | [optional]
 
 ### Return type
 
-[**\Jetract\Model\BidderGroupsResponse**](../Model/BidderGroupsResponse.md)
+[**\Swagger\Client\Model\BidderGroupsResponse**](../Model/BidderGroupsResponse.md)
 
 ### Authorization
 
@@ -185,7 +197,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **newBidderGroup**
-> \Jetract\Model\JResponseID newBidderGroup($companyID, $bidderGroupNew)
+> \Swagger\Client\Model\JResponseID newBidderGroup($user_id, $company_id, $x_api_key, $bidder_group_new)
 
 
 
@@ -197,21 +209,23 @@ This function will create a new bidder group.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\BiddersGroupsApi(
+$apiInstance = new Swagger\Client\Api\BiddersGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$companyID = "companyID_example"; // string | 
-$bidderGroupNew = new \Jetract\Model\BidderGroupNew(); // \Jetract\Model\BidderGroupNew | 
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$bidder_group_new = new \Swagger\Client\Model\BidderGroupNew(); // \Swagger\Client\Model\BidderGroupNew | 
 
 try {
-    $result = $apiInstance->newBidderGroup($companyID, $bidderGroupNew);
+    $result = $apiInstance->newBidderGroup($user_id, $company_id, $x_api_key, $bidder_group_new);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BiddersGroupsApi->newBidderGroup: ', $e->getMessage(), PHP_EOL;
@@ -223,12 +237,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyID** | **string**|  |
- **bidderGroupNew** | [**\Jetract\Model\BidderGroupNew**](../Model/BidderGroupNew.md)|  |
+ **user_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **bidder_group_new** | [**\Swagger\Client\Model\BidderGroupNew**](../Model/BidderGroupNew.md)|  |
 
 ### Return type
 
-[**\Jetract\Model\JResponseID**](../Model/JResponseID.md)
+[**\Swagger\Client\Model\JResponseID**](../Model/JResponseID.md)
 
 ### Authorization
 
@@ -242,7 +258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateBidderGroup**
-> \Jetract\Model\JStatus updateBidderGroup($companyID, $groupID, $bidderGroupNew)
+> \Swagger\Client\Model\JStatus updateBidderGroup($user_id, $company_id, $x_api_key, $group_id, $bidder_group_new)
 
 
 
@@ -254,22 +270,24 @@ This function will update a given bidder group.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\BiddersGroupsApi(
+$apiInstance = new Swagger\Client\Api\BiddersGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$companyID = "companyID_example"; // string | 
-$groupID = "groupID_example"; // string | 
-$bidderGroupNew = new \Jetract\Model\BidderGroupNew(); // \Jetract\Model\BidderGroupNew | 
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$group_id = "group_id_example"; // string | 
+$bidder_group_new = new \Swagger\Client\Model\BidderGroupNew(); // \Swagger\Client\Model\BidderGroupNew | 
 
 try {
-    $result = $apiInstance->updateBidderGroup($companyID, $groupID, $bidderGroupNew);
+    $result = $apiInstance->updateBidderGroup($user_id, $company_id, $x_api_key, $group_id, $bidder_group_new);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BiddersGroupsApi->updateBidderGroup: ', $e->getMessage(), PHP_EOL;
@@ -281,13 +299,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyID** | **string**|  |
- **groupID** | **string**|  |
- **bidderGroupNew** | [**\Jetract\Model\BidderGroupNew**](../Model/BidderGroupNew.md)|  |
+ **user_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **group_id** | **string**|  |
+ **bidder_group_new** | [**\Swagger\Client\Model\BidderGroupNew**](../Model/BidderGroupNew.md)|  |
 
 ### Return type
 
-[**\Jetract\Model\JStatus**](../Model/JStatus.md)
+[**\Swagger\Client\Model\JStatus**](../Model/JStatus.md)
 
 ### Authorization
 

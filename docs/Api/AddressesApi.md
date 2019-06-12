@@ -1,4 +1,4 @@
-# Jetract\AddressesApi
+# Swagger\Client\AddressesApi
 
 All URIs are relative to *https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getAddresses**
-> \Jetract\Model\AddressesResponse getAddresses($companyID)
+> \Swagger\Client\Model\AddressesResponse getAddresses($user_id, $company_id, $x_api_key)
 
 
 
@@ -22,20 +22,22 @@ This function returns all addresses in your account. If you provide a companyID,
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AddressesApi(
+$apiInstance = new Swagger\Client\Api\AddressesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$companyID = "companyID_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
 
 try {
-    $result = $apiInstance->getAddresses($companyID);
+    $result = $apiInstance->getAddresses($user_id, $company_id, $x_api_key);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AddressesApi->getAddresses: ', $e->getMessage(), PHP_EOL;
@@ -47,11 +49,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyID** | **string**|  | [optional]
+ **user_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
 
 ### Return type
 
-[**\Jetract\Model\AddressesResponse**](../Model/AddressesResponse.md)
+[**\Swagger\Client\Model\AddressesResponse**](../Model/AddressesResponse.md)
 
 ### Authorization
 
@@ -65,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCities**
-> \Jetract\Model\AddressCityResponse getCities($countryID)
+> \Swagger\Client\Model\AddressCityResponse getCities($user_id, $country_id, $company_id, $x_api_key)
 
 
 
@@ -77,20 +81,23 @@ This function will return all cities registered under a given country. Note: Cit
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AddressesApi(
+$apiInstance = new Swagger\Client\Api\AddressesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$countryID = "countryID_example"; // string | 
+$user_id = "user_id_example"; // string | 
+$country_id = "country_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
 
 try {
-    $result = $apiInstance->getCities($countryID);
+    $result = $apiInstance->getCities($user_id, $country_id, $company_id, $x_api_key);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AddressesApi->getCities: ', $e->getMessage(), PHP_EOL;
@@ -102,11 +109,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **countryID** | **string**|  |
+ **user_id** | **string**|  |
+ **country_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
 
 ### Return type
 
-[**\Jetract\Model\AddressCityResponse**](../Model/AddressCityResponse.md)
+[**\Swagger\Client\Model\AddressCityResponse**](../Model/AddressCityResponse.md)
 
 ### Authorization
 
@@ -120,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **newAddress**
-> \Jetract\Model\JResponseID newAddress($companyID, $addressNew)
+> \Swagger\Client\Model\JResponseID newAddress($user_id, $company_id, $x_api_key, $address_new)
 
 
 
@@ -132,21 +142,23 @@ This function will create a new address record for a given company.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Jetract\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Jetract\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
-$apiInstance = new Jetract\Api\AddressesApi(
+$apiInstance = new Swagger\Client\Api\AddressesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$companyID = "companyID_example"; // string | 
-$addressNew = new \Jetract\Model\AddressNew(); // \Jetract\Model\AddressNew | 
+$user_id = "user_id_example"; // string | 
+$company_id = "company_id_example"; // string | 
+$x_api_key = "x_api_key_example"; // string | 
+$address_new = new \Swagger\Client\Model\AddressNew(); // \Swagger\Client\Model\AddressNew | 
 
 try {
-    $result = $apiInstance->newAddress($companyID, $addressNew);
+    $result = $apiInstance->newAddress($user_id, $company_id, $x_api_key, $address_new);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AddressesApi->newAddress: ', $e->getMessage(), PHP_EOL;
@@ -158,12 +170,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyID** | **string**|  |
- **addressNew** | [**\Jetract\Model\AddressNew**](../Model/AddressNew.md)|  |
+ **user_id** | **string**|  |
+ **company_id** | **string**|  |
+ **x_api_key** | **string**|  |
+ **address_new** | [**\Swagger\Client\Model\AddressNew**](../Model/AddressNew.md)|  |
 
 ### Return type
 
-[**\Jetract\Model\JResponseID**](../Model/JResponseID.md)
+[**\Swagger\Client\Model\JResponseID**](../Model/JResponseID.md)
 
 ### Authorization
 

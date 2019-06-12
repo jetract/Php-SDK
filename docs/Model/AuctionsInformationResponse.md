@@ -1,0 +1,51 @@
+# AuctionsInformationResponse
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **string** | ID of the auction. | [optional] 
+**code** | **string** | Code of the auction. Automatically generated. | [optional] 
+**name** | **string** | Name of the auction. | [optional] 
+**type** | **float** | Defines the auction type. Examples&lt;br&gt;1:Reverse Classic Auction&lt;br&gt;3:Reverse British Auction&lt;br&gt;4:Reverse Sealed Auction&lt;br&gt;5:Reverse Sealed Enveloped Auction | [optional] 
+**bid_change_limit** | **float** | Limit bidders to increase to decrease their bids depending on the Auction type.&lt;br&gt;1:No Limit&lt;br&gt;2:Apply Limit | [optional] 
+**bid_limit** | **float** | Maximum/Minimum bid limit. Depending on the auction type it can be reverse or forward change.&lt;br&gt;When not specified, returns zero value. | [optional] 
+**budget** | **float** | Budget of the auction. Only used for internal reporting tools.&lt;br&gt;When not specified, returns zero value. | [optional] 
+**minimum_change** | **float** | Minimum amount of change for the next bid.&lt;br&gt;Depending on the auction type it can be reverse or forward change.&lt;br&gt;When not specified, returns zero value. | [optional] 
+**currency** | **string** | Currency type of the Auction. Bidders will give their bids on this currency. | [optional] 
+**visible_rank** | **float** | Allow bidders to see their rank in total amount.&lt;br&gt;Only available in British Auction types. | [optional] 
+**list_price** | **float** |  | [optional] 
+**agreement_text** | **string** | Agreement Text that bidders have to accept before participating in the auction. | [optional] 
+**note** | **string** | Attached a note for your suppliers to sees. | [optional] 
+**delivery_date** | **string** | Delivery date in terms of YYYY-MM-DD HH:MM:SS format. | [optional] 
+**auto_time_extension** | [**\Swagger\Client\Model\AuctionsInformationResponseAutoTimeExtension**](AuctionsInformationResponseAutoTimeExtension.md) |  | [optional] 
+**date** | **string** | Date of the auction of YYYY-MM-DD HH:MM:SS format. | [optional] 
+**duration** | **float** | Duration of the auction. | [optional] 
+**default_duration** | **float** | Duration of the auction is not included time extension. | [optional] 
+**end_date** | **string** | End Date of the auction of YYYY-MM-DD HH:MM:SS format. | [optional] 
+**reminder** | [**\Swagger\Client\Model\AuctionsInformationResponseReminder**](AuctionsInformationResponseReminder.md) |  | [optional] 
+**publish** | **float** | Draft the auction or publish it. Published auctions will be visible by the bidders.&lt;br&gt;1:Publish&lt;br&gt;2:Draft | [optional] 
+**status** | **float** | status of the auction.&lt;br&gt;1:Waiting (Auction opened, but not yet started.).&lt;br&gt;2:Active (Auction started and currently active.).&lt;br&gt;3:Approval process (Auction is ended and not approval process start yet.).&lt;br&gt;4:Completed (Procurement process is completed for auction.). | [optional] 
+**start_date** | **string** | The auction start date on. YYYY-MM-DD HH:MM:SS format. | [optional] 
+**transport_type** | **string** | If the value is empty, bidders will choose the own transport type. | [optional] 
+**invite_mail_subject** | **string** | The subject of the outgoing mail when the auction is published. | [optional] 
+**invite_mail_body** | **string** | The content of the outgoing mail when the auction is published. | [optional] 
+**valid_until_date** | **string** | If the value is empty, bidders will choose the validity date. YYYY-MM-DD HH:MM:SS format when is not empty. | [optional] 
+**payment_type_id** | **string** | If the value is empty, bidders will choose the own payment type. | [optional] 
+**created_date** | **string** | Auction create date. YYYY-MM-DD HH:MM:SS format. | [optional] 
+**approval_process** | [**\Swagger\Client\Model\AuctionsInformationResponseApprovalProcess**](AuctionsInformationResponseApprovalProcess.md) |  | [optional] 
+**department** | [**\Swagger\Client\Model\AuctionsInformationResponseDepartment**](AuctionsInformationResponseDepartment.md) |  | [optional] 
+**order_id** | **string** | ID of the order if the auction converted to order. | [optional] 
+**creator** | [**\Swagger\Client\Model\AuctionsInformationResponseCreator**](AuctionsInformationResponseCreator.md) |  | [optional] 
+**time_control** | **bool** |  | [optional] 
+**auto_start** | **float** | This auction to start automatically. | [optional] 
+**auto_end** | **float** | This auction to end automatically. | [optional] 
+**vat_rate** | **float** | Activated item-based vat rate of this auction. | [optional] 
+**bidder_vat_rate** | **float** | Activated bidders to provide item-based vat rates. | [optional] 
+**item_files** | **float** | Indicated if you are attaching files to items. | [optional] 
+**bid_change_type** | **float** | 1: Write bid amount.&lt;br&gt;2: Increase amount button. | [optional] 
+**change_amounts** | [**\Swagger\Client\Model\AuctionsInformationResponseChangeAmounts[]**](AuctionsInformationResponseChangeAmounts.md) | If the bidChangeType is 2, the amounts of the buttons to be shown. | [optional] 
+**sales_count** | **float** | Number of items sold. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

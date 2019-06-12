@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**iD** | **string** | ID of the Country. | [optional] 
+**id** | **string** | ID of the Country. | [optional] 
 **code** | **string** | Country code.&lt;br&gt;Example: TR for Turkey | [optional] 
 **name** | **string** | Country Name | [optional] 
 

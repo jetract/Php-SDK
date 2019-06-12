@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**iD** | **string** | ID of the address country. | [optional] 
+**id** | **string** | ID of the address country. | [optional] 
 **name** | **string** | Name of the address country. | [optional] 
 **code** | **string** | Code of the address country. | [optional] 
 
