@@ -1,0 +1,2299 @@
+{
+	"info": {
+		"_postman_id": "588a3d91-a7bf-43cd-9790-93e08fd2c98e",
+		"name": "JETRACT API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addresses",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/addresses",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"addresses"
+							]
+						},
+						"description": "This function returns all addresses in your account. If you provide a companyID, system will only return the addresses registered for that company. Else, it will return all addresses in the account."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/addresses",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"addresses"
+							]
+						},
+						"description": "This function will create a new address record for a given company."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "countryID",
+								"value": "{{countryID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/addresses/cities",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"addresses",
+								"cities"
+							]
+						},
+						"description": "This function will return all cities registered under a given country. Note: Cities are system registered data and cannot be modified."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/addresses/countries",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"addresses",
+								"countries"
+							]
+						},
+						"description": "This function will return all countries. Note: Countries are system registered data and cannot be modified."
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for addresses"
+		},
+		{
+			"name": "auctions",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "status",
+								"value": "{{status}}"
+							},
+							{
+								"key": "type",
+								"value": "{{type}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							},
+							{
+								"key": "range",
+								"value": "{{range}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions"
+							]
+						},
+						"description": "This function will return all auctions for a given company."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"API GATEWAY EXAMPLE\",\n    \"type\" : 8,\n    \"date\" : \"2019-06-20\",\n    \"time\" : \"13:00\",\n    \"duration\":60,\n    \"budget\" : 0,\n    \"minimumChange\":0,\n    \"currency\" : \"TRY\",\n    \"agreementText\" : \"Agreement Text that bidders have to accept before participating in the auction.\",\n    \"deliveryRequired\" : 0,\n    \"deliveryDate\":\"2019-04-30\",\n    \"reminder\" : {\n        \"date\":\"2019-04-19\",\n        \"frequency\" : 24\n    },\n    \"publish\" : 1,\n    \"listPrice\": 1,\n    \"auctionItems\" : [\n        {\n            \"categoryID\" : \"acf4a180-ae23-4673-854b-4dc3811b467b\",\n            \"productID\" : \"c9b79f8f-7f6a-4689-8f42-0b4e8dbe5dda\",\n            \"amount\" : 10,\n            \"unit\" : \"Adet\",\n            \"description\" : \"\",\n            \"listPrice\" : 0\n        }\n    ],\n    \"auctionConditions\" : [\n        {\n            \"name\" : \"Condition 1\",\n            \"type\" : 3,\n            \"required\": true\n        }\n    ],\n    \"bidders\" : [\n        {\n            \"ID\":\"2e05b24b-f17d-4739-8e51-46afcc92677b\",\n        \t\"new\": false\n        }\n    ],\n    \"bidderGroups\" : [],\n    \"deliveryAddress\" : \"\",\n    \"note\" : \"Please place your bids with VAT included prices.\",\n    \"departmentID\" : \"8f41d06e-4322-4a69-a6d4-0acac37d64bf\",\n    \"autoTimeExtension\" : {\n        \"extendType\" : 1,\n        \"margin\" : 1,\n        \"duration\" : 1,\n        \"completionType\" : 2\n    },\n    \"bidChangeLimit\" : 1,\n    \"requestDeliveryDateForItems\" : 2,\n    \"visibleOffers\" : 1,\n    \"visibleRank\" : \"0\",\n    \"transportType\" : \"\",\n    \"paymentType\" : \"c1ab8cbb-1f86-497e-a391-0ea89155ad04\",\n    \"validUntilDate\" : \"2019-06-01\",\n    \"bidLimit\" : 0,\n    \"inviteMailBody\" : \"The content of the outgoing mail when the auction is published.\",\n    \"inviteMailTitle\" : \"inviteMailTitle\",\n    \"files\" : [],\n    \"autoStart\" : 0,\n    \"autoEnd\" : 1,\n    \"vatRate\" : 0,\n    \"bidderVatRate\" : 0,\n    \"itemFiles\" : 0,\n    \"bidChangeType\" : 2,\n    \"changeAmounts\" : [\n    \t{\n    \t\t\"price\" : \"100\"\n    \t},\n    \t{\n    \t\t\"price\" : \"200\"\n    \t},\n    \t{\n    \t\t\"price\" : \"500\"\n    \t},\n    \t{\n    \t\t\"price\" : \"1000\"\n    \t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions"
+							]
+						},
+						"description": "This function will create a new auction."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/announcements/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"announcements",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will return all announcements made in a given auction."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/bidders/agreements/reset/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"bidders",
+								"agreements",
+								"reset",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/bidders/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"bidders",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will return the bidders of a given auction."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/end/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"end",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will terminate an Auction.<br>A notification will be pushed to all bidders in real-time."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/files/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"files",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will add a new file to auction files. Bidders will be able to see and download the file."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/files/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"files",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will remove a file from Auction Files.<br>Bidders will no longer be able to access this file."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/offers/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"offers",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will delete an offer from given bidder and an auction."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/publish/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"publish",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will publish a previously drafted auction. Bidders will be able to see and join the auction."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/reports/excel/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"reports",
+								"excel",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will generate an excel report of the given auction.<br>Return will be the ID of newly generated file. You can use files/get method to download the file."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/stages/end/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"stages",
+								"end",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will terminate a stage from a given auction.<br>Warning!!! Only use at Sealed and Enveloped Auction Types!"
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/stages/start/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"stages",
+								"start",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will start a stage for a given auction.<br>Warning!!!Only use at Sealed and Enveloped Auction Types."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/stages/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"stages",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will create a new stage to a given auction."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/stages/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"stages",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will delete a stage from a given auction."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/start/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"start",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will start the auction. A notification will be pushed to all bidders in real-time."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will return the details of a given auction."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"API GATEWAY EXAMPLE\",\n    \"date\" : \"2019-06-20\",\n    \"time\" : \"13:00\",\n    \"duration\":60,\n    \"budget\" : \"0\",\n    \"minimumChange\":\"0\",\n    \"currency\" : \"TRY\",\n    \"agreementText\" : \"Agreement Text that bidders have to accept before participating in the auction.\",\n    \"deliveryRequired\" : 0,\n    \"deliveryDate\":\"2019-04-30\",\n    \"reminder\" : {\n        \"date\":\"2019-04-19\",\n        \"frequency\" : 24\n    },\n    \"publish\" : 1,\n    \"listPrice\": 1,\n    \"auctionItems\" : [\n        {\n        \t\"ID\" : \"17357d4d-7162-4dfe-a339-41c17e53cc53\",\n            \"categoryID\" : \"acf4a180-ae23-4673-854b-4dc3811b467b\",\n            \"productID\" : \"c9b79f8f-7f6a-4689-8f42-0b4e8dbe5dda\",\n            \"amount\" : 10,\n            \"unit\" : \"Adet\",\n            \"description\" : \"\",\n            \"listPrice\" : 0\n        }\n    ],\n    \"auctionConditions\" : [\n        {\n            \"name\" : \"Condition 1\",\n            \"type\" : 3,\n            \"required\": true\n        }\n    ],\n    \"bidders\" : [\n        {\n            \"ID\":\"2e05b24b-f17d-4739-8e51-46afcc92677b\",\n        \t\"new\": false\n        }\n    ],\n    \"bidderGroups\" : [],\n    \"deliveryAddress\" : \"\",\n    \"note\" : \"Please place your bids with VAT included prices.\",\n    \"departmentID\" : \"8f41d06e-4322-4a69-a6d4-0acac37d64bf\",\n    \"autoTimeExtension\" : {\n        \"extendType\" : 1,\n        \"margin\" : 1,\n        \"duration\" : 1,\n        \"completionType\" : 2\n    },\n    \"bidChangeLimit\" : 1,\n    \"requestDeliveryDateForItems\" : \"2\",\n    \"visibleOffers\" : 1,\n    \"visibleRank\" : \"0\",\n    \"transportType\" : \"\",\n    \"paymentType\" : \"c1ab8cbb-1f86-497e-a391-0ea89155ad04\",\n    \"validUntilDate\" : \"2019-06-01\",\n    \"bidLimit\" : 0,\n    \"inviteMailBody\" : \"The content of the outgoing mail when the auction is published.\",\n    \"inviteMailTitle\" : \"inviteMailTitle\",\n    \"files\" : [],\n    \"autoStart\" : 0,\n    \"autoEnd\" : 1,\n    \"vatRate\" : 0,\n    \"bidderVatRate\" : 0,\n    \"itemFiles\" : 0,\n    \"bidChangeType\" : 2,\n    \"changeAmounts\" : [\n    \t{\n    \t\t\"price\" : \"100\"\n    \t},\n    \t{\n    \t\t\"price\" : \"200\"\n    \t},\n    \t{\n    \t\t\"price\" : \"500\"\n    \t},\n    \t{\n    \t\t\"price\" : \"1000\"\n    \t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will update a given auction."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will delete an auction."
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for auctions"
+		},
+		{
+			"name": "bidder",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "status",
+								"value": "{{status}}"
+							},
+							{
+								"key": "type",
+								"value": "{{type}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							},
+							{
+								"key": "range",
+								"value": "{{range}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidder/auctions",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidder",
+								"auctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidder/auctions/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidder",
+								"auctions",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for bidder"
+		},
+		{
+			"name": "bidders",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders"
+							]
+						},
+						"description": "This function will return all bidders of a given company."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders"
+							]
+						},
+						"description": "This function will crate a new bidder at a given company."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "includeBidders",
+								"value": "{{includeBidders}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/groups",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders",
+								"groups"
+							]
+						},
+						"description": "This function will return all Bidder Groups of a given company.<br>A bidder group can be used to enable multiple bidders to participate in the same auction<br>without attaching each bidder."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/groups",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders",
+								"groups"
+							]
+						},
+						"description": "This function will create a new bidder group."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "includeBidders",
+								"value": "{{includeBidders}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/groups/:groupID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders",
+								"groups",
+								":groupID"
+							],
+							"variable": [
+								{
+									"key": "groupID",
+									"value": "{{groupID}}"
+								}
+							]
+						},
+						"description": "This function will return the details of a given bidder group."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/groups/:groupID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders",
+								"groups",
+								":groupID"
+							],
+							"variable": [
+								{
+									"key": "groupID",
+									"value": "{{groupID}}"
+								}
+							]
+						},
+						"description": "This function will update a given bidder group."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/groups/:groupID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders",
+								"groups",
+								":groupID"
+							],
+							"variable": [
+								{
+									"key": "groupID",
+									"value": "{{groupID}}"
+								}
+							]
+						},
+						"description": "This function will delete a bidder group from a given company."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/:bidderID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders",
+								":bidderID"
+							],
+							"variable": [
+								{
+									"key": "bidderID",
+									"value": "{{bidderID}}"
+								}
+							]
+						},
+						"description": "This function will return the details of a given Bidder."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/:bidderID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders",
+								":bidderID"
+							],
+							"variable": [
+								{
+									"key": "bidderID",
+									"value": "{{bidderID}}"
+								}
+							]
+						},
+						"description": "This function will update a given bidder."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/:bidderID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders",
+								":bidderID"
+							],
+							"variable": [
+								{
+									"key": "bidderID",
+									"value": "{{bidderID}}"
+								}
+							]
+						},
+						"description": "This function will delete a given Bidder from a given company."
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for bidders"
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/categories",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"categories"
+							]
+						},
+						"description": "This function will return all Categories."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/categories",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"categories"
+							]
+						},
+						"description": "This function will create a new category for a given company."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/categories/:categoryID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"categories",
+								":categoryID"
+							],
+							"variable": [
+								{
+									"key": "categoryID",
+									"value": "{{categoryID}}"
+								}
+							]
+						},
+						"description": "This function will return the details of a given category."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/categories/:categoryID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"categories",
+								":categoryID"
+							],
+							"variable": [
+								{
+									"key": "categoryID",
+									"value": "{{categoryID}}"
+								}
+							]
+						},
+						"description": "This function will update a given category."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/categories/:categoryID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"categories",
+								":categoryID"
+							],
+							"variable": [
+								{
+									"key": "categoryID",
+									"value": "{{categoryID}}"
+								}
+							]
+						},
+						"description": "This function will delete a given category."
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for categories"
+		},
+		{
+			"name": "files",
+			"item": [
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							},
+							{
+								"key": "content-type",
+								"value": "{{content-type}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/files",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"files"
+							]
+						},
+						"description": "This function will upload a file to Jetract Servers.<br>Returning data will be ID of newly created file.<br>Important:You need to pass, is_public,company_uuid and file in a form-data!"
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "userID",
+								"value": "{{userID}}"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/files/:fileID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"files",
+								":fileID"
+							],
+							"variable": [
+								{
+									"key": "fileID",
+									"value": "{{fileID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for files"
+		},
+		{
+			"name": "",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}"
+					}
+				],
+				"url": {
+					"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/",
+					"protocol": "https",
+					"host": [
+						"30fo61e8a3",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Test",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
