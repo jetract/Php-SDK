@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **newBidder**
-> \Swagger\Client\Model\JResponseID newBidder($user_id, $company_id, $x_api_key, $bidder_new)
+> \Swagger\Client\Model\BidderNewResponse newBidder($user_id, $company_id, $x_api_key, $bidder_new)
 
 
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\JResponseID**](../Model/JResponseID.md)
+[**\Swagger\Client\Model\BidderNewResponse**](../Model/BidderNewResponse.md)
 
 ### Authorization
 

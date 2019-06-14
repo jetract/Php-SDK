@@ -1002,7 +1002,7 @@ class BiddersApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\JResponseID
+     * @return \Swagger\Client\Model\BidderNewResponse
      */
     public function newBidder($user_id, $company_id, $x_api_key, $bidder_new)
     {
@@ -1020,11 +1020,11 @@ class BiddersApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\JResponseID, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\BidderNewResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function newBidderWithHttpInfo($user_id, $company_id, $x_api_key, $bidder_new)
     {
-        $returnType = '\Swagger\Client\Model\JResponseID';
+        $returnType = '\Swagger\Client\Model\BidderNewResponse';
         $request = $this->newBidderRequest($user_id, $company_id, $x_api_key, $bidder_new);
 
         try {
@@ -1076,7 +1076,7 @@ class BiddersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\JResponseID',
+                        '\Swagger\Client\Model\BidderNewResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1124,7 +1124,7 @@ class BiddersApi
      */
     public function newBidderAsyncWithHttpInfo($user_id, $company_id, $x_api_key, $bidder_new)
     {
-        $returnType = '\Swagger\Client\Model\JResponseID';
+        $returnType = '\Swagger\Client\Model\BidderNewResponse';
         $request = $this->newBidderRequest($user_id, $company_id, $x_api_key, $bidder_new);
 
         return $this->client
