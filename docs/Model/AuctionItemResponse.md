@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **category** | [**\Swagger\Client\Model\AuctionItemResponseCategory**](AuctionItemResponseCategory.md) |  | [optional] 
 **file_id** | **string** | ID of the item file. | [optional] 
 **sales_type** | **float** | Forward auction sales type. 1: Not Sold.&lt;br&gt;2: Sold. | [optional] 
+**winner_bidder** | [**\Swagger\Client\Model\AuctionItemResponseWinnerBidder**](AuctionItemResponseWinnerBidder.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

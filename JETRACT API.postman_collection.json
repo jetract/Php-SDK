@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "588a3d91-a7bf-43cd-9790-93e08fd2c98e",
+		"_postman_id": "1869351a-1af7-4aa4-abc3-79c8fd46912d",
 		"name": "JETRACT API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -22,16 +22,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -67,21 +64,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"countryID\" : \"8fb13a58-4492-47b9-a388-9d6a087b1b4b\",\n\t\"cityID\" : \"12a0f072-e6cc-4a2c-9738-2fdcbe45fbfe\",\n\t\"name\" : \"İTÜ Ofis\",\n\t\"location\" : \"İTÜ Teknokent Arı 4 Binası Magnet Ofisi Sarıyer\"\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/addresses",
@@ -116,20 +110,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "countryID",
 								"value": "{{countryID}}"
 							},
 							{
-								"key": "companyID",
-								"value": "{{companyID}}"
-							},
-							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -162,16 +149,9 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
-								"key": "companyID",
-								"value": "{{companyID}}"
-							},
-							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -214,8 +194,8 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
+								"key": "companyID",
+								"value": "{{companyID}}"
 							},
 							{
 								"key": "status",
@@ -226,16 +206,9 @@
 								"value": "{{type}}"
 							},
 							{
-								"key": "companyID",
-								"value": "{{companyID}}"
-							},
-							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							},
-							{
-								"key": "range",
-								"value": "{{range}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -271,21 +244,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\" : \"API GATEWAY EXAMPLE\",\n    \"type\" : 8,\n    \"date\" : \"2019-06-20\",\n    \"time\" : \"13:00\",\n    \"duration\":60,\n    \"budget\" : 0,\n    \"minimumChange\":0,\n    \"currency\" : \"TRY\",\n    \"agreementText\" : \"Agreement Text that bidders have to accept before participating in the auction.\",\n    \"deliveryRequired\" : 0,\n    \"deliveryDate\":\"2019-04-30\",\n    \"reminder\" : {\n        \"date\":\"2019-04-19\",\n        \"frequency\" : 24\n    },\n    \"publish\" : 1,\n    \"listPrice\": 1,\n    \"auctionItems\" : [\n        {\n            \"categoryID\" : \"acf4a180-ae23-4673-854b-4dc3811b467b\",\n            \"productID\" : \"c9b79f8f-7f6a-4689-8f42-0b4e8dbe5dda\",\n            \"amount\" : 10,\n            \"unit\" : \"Adet\",\n            \"description\" : \"\",\n            \"listPrice\" : 0\n        }\n    ],\n    \"auctionConditions\" : [\n        {\n            \"name\" : \"Condition 1\",\n            \"type\" : 3,\n            \"required\": true\n        }\n    ],\n    \"bidders\" : [\n        {\n            \"ID\":\"2e05b24b-f17d-4739-8e51-46afcc92677b\",\n        \t\"new\": false\n        }\n    ],\n    \"bidderGroups\" : [],\n    \"deliveryAddress\" : \"\",\n    \"note\" : \"Please place your bids with VAT included prices.\",\n    \"departmentID\" : \"8f41d06e-4322-4a69-a6d4-0acac37d64bf\",\n    \"autoTimeExtension\" : {\n        \"extendType\" : 1,\n        \"margin\" : 1,\n        \"duration\" : 1,\n        \"completionType\" : 2\n    },\n    \"bidChangeLimit\" : 1,\n    \"requestDeliveryDateForItems\" : 2,\n    \"visibleOffers\" : 1,\n    \"visibleRank\" : \"0\",\n    \"transportType\" : \"\",\n    \"paymentType\" : \"c1ab8cbb-1f86-497e-a391-0ea89155ad04\",\n    \"validUntilDate\" : \"2019-06-01\",\n    \"bidLimit\" : 0,\n    \"inviteMailBody\" : \"The content of the outgoing mail when the auction is published.\",\n    \"inviteMailTitle\" : \"inviteMailTitle\",\n    \"files\" : [],\n    \"autoStart\" : 0,\n    \"autoEnd\" : 1,\n    \"vatRate\" : 0,\n    \"bidderVatRate\" : 0,\n    \"itemFiles\" : 0,\n    \"bidChangeType\" : 2,\n    \"changeAmounts\" : [\n    \t{\n    \t\t\"price\" : \"100\"\n    \t},\n    \t{\n    \t\t\"price\" : \"200\"\n    \t},\n    \t{\n    \t\t\"price\" : \"500\"\n    \t},\n    \t{\n    \t\t\"price\" : \"1000\"\n    \t}\n\t]\n}"
+							"raw": "{\n    \"name\" : \"API GATEWAY EXAMPLE 1\",\n    \"type\" : 3,\n    \"date\" : \"2019-05-20\",\n    \"time\" : \"13:00\",\n    \"duration\":60,\n    \"budget\" : 0,\n    \"minimumChange\":0,\n    \"currency\" : \"TRY\",\n    \"agreementText\" : \"Agreement Text that bidders have to accept before participating in the auction.\",\n    \"deliveryRequired\" : 0,\n    \"deliveryDate\":\"2019-04-30\",\n    \"reminder\" : {\n        \"date\":\"2019-04-19\",\n        \"frequency\" : 24\n    },\n    \"publish\" : 1,\n    \"listPrice\": 1,\n    \"auctionItems\" : [\n        {\n            \"categoryID\" : \"acf4a180-ae23-4673-854b-4dc3811b467b\",\n            \"productID\" : \"c9b79f8f-7f6a-4689-8f42-0b4e8dbe5dda\",\n            \"amount\" : 10,\n            \"unit\" : \"Adet\",\n            \"description\" : \"\",\n            \"listPrice\" : 0\n        }\n    ],\n    \"auctionConditions\" : [\n        {\n            \"name\" : \"Condition 1\",\n            \"type\" : 3,\n            \"required\": true\n        }\n    ],\n    \"bidders\" : [\n        {\n            \"ID\":\"2e05b24b-f17d-4739-8e51-46afcc92677b\",\n        \t\"new\": false\n        }\n    ],\n    \"bidderGroups\" : [],\n    \"deliveryAddress\" : \"\",\n    \"note\" : \"Please place your bids with VAT included prices.\",\n    \"departmentID\" : \"8f41d06e-4322-4a69-a6d4-0acac37d64bf\",\n    \"autoTimeExtension\" : {\n        \"type\" : 1,\n        \"margin\" : 10,\n        \"duration\" : 10\n    },\n    \"bidChangeLimit\" : 1,\n    \"requestDeliveryDateForItems\" : 2,\n    \"visibleOffers\" : 1,\n    \"visibleRank\" : false,\n    \"transportType\" : \"\",\n    \"paymentType\" : \"\",\n    \"validUntilDate\" : \"2019-05-01\",\n    \"bidLimit\" : 0,\n    \"inviteMailBody\" : \"The content of the outgoing mail when the auction is published.\",\n    \"inviteMailTitle\" : \"inviteMailTitle\",\n    \"files\" : []\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions",
@@ -320,16 +290,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -373,24 +340,21 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"message\" : \"New announcement example\"\n}"
 						},
 						"url": {
-							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/bidders/agreements/reset/:auctionID",
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/announcements/:auctionID",
 							"protocol": "https",
 							"host": [
 								"30fo61e8a3",
@@ -402,9 +366,7 @@
 							"path": [
 								"Test",
 								"auctions",
-								"bidders",
-								"agreements",
-								"reset",
+								"announcements",
 								":auctionID"
 							],
 							"variable": [
@@ -413,7 +375,8 @@
 									"value": "{{auctionID}}"
 								}
 							]
-						}
+						},
+						"description": "This function will post a new announcement to a given auction. All announcements will be pushed to all bidders in real-time."
 					},
 					"response": []
 				},
@@ -431,21 +394,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"bidderID\" : \"2e05b24b-f17d-4739-8e51-46afcc92677b\"\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/bidders/:auctionID",
@@ -488,8 +448,59 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{X-API-KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"type\" : 1,\n\t\"margin\" : 10,\n\t\"duration\" : 3\n}"
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/duration/autoExtend/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"duration",
+								"autoExtend",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will change the Auto Extend configurations of a given auction.<br>You can Turn ON/OFF or modify the extension rules."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
 							},
 							{
 								"key": "companyID",
@@ -497,7 +508,63 @@
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"duration\" : 3\n}"
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/duration/extend/:auctionID",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"auctions",
+								"duration",
+								"extend",
+								":auctionID"
+							],
+							"variable": [
+								{
+									"key": "auctionID",
+									"value": "{{auctionID}}"
+								}
+							]
+						},
+						"description": "This function will change the duration of a given auction.<br>Keep in mind that extend duration can be negative!<br>Example: 5 --> Adds 5 minutes to duration.<br>Example:-5 -->Subtracts 5 minutes from duration."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -545,21 +612,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"bidderID\" : \"2e05b24b-f17d-4739-8e51-46afcc92677b\",\n\t\"type\" : 2,\n\t\"files\" : [\n\t\t{\n\t\t\t\"ID\" : \"5a96b6ed-3635-43d0-82c7-c6eceef787e5\"\n\t\t}\n\t]\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/files/:auctionID",
@@ -602,21 +666,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"fileID\" : \"5a96b6ed-3635-43d0-82c7-c6eceef787e5\",\n\t\"bidderID\" : \"2e05b24b-f17d-4739-8e51-46afcc92677b\",\n\t\"type\" : 2\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/files/:auctionID",
@@ -659,21 +720,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"offerID\" : \"4b415f03-3691-4664-a15a-a3e7b7d0df5b\"\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/offers/:auctionID",
@@ -716,16 +774,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -773,16 +828,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -827,21 +879,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"bidders\" : [\n\t\t{\n\t\t\t\"ID\" : \"2e05b24b-f17d-4739-8e51-46afcc92677b\",\n\t\t\t\"rank\" : 2\n\t\t},\n\t\t{\n\t\t\t\"ID\" : \"3e9ddb1c-b2ca-4059-aaed-f48d3393467e\",\n\t\t\t\"rank\" : 1\n\t\t}\n\t]\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/stages/end/:auctionID",
@@ -885,16 +934,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -945,6 +991,11 @@
 							{
 								"key": "companyID",
 								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -992,21 +1043,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"stageID\" : \"1be0cc61-b038-4c9d-bc37-63fbf89fa202\"\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/stages/:auctionID",
@@ -1049,16 +1097,8 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1106,16 +1146,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -1158,21 +1195,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\" : \"API GATEWAY EXAMPLE\",\n    \"date\" : \"2019-06-20\",\n    \"time\" : \"13:00\",\n    \"duration\":60,\n    \"budget\" : \"0\",\n    \"minimumChange\":\"0\",\n    \"currency\" : \"TRY\",\n    \"agreementText\" : \"Agreement Text that bidders have to accept before participating in the auction.\",\n    \"deliveryRequired\" : 0,\n    \"deliveryDate\":\"2019-04-30\",\n    \"reminder\" : {\n        \"date\":\"2019-04-19\",\n        \"frequency\" : 24\n    },\n    \"publish\" : 1,\n    \"listPrice\": 1,\n    \"auctionItems\" : [\n        {\n        \t\"ID\" : \"17357d4d-7162-4dfe-a339-41c17e53cc53\",\n            \"categoryID\" : \"acf4a180-ae23-4673-854b-4dc3811b467b\",\n            \"productID\" : \"c9b79f8f-7f6a-4689-8f42-0b4e8dbe5dda\",\n            \"amount\" : 10,\n            \"unit\" : \"Adet\",\n            \"description\" : \"\",\n            \"listPrice\" : 0\n        }\n    ],\n    \"auctionConditions\" : [\n        {\n            \"name\" : \"Condition 1\",\n            \"type\" : 3,\n            \"required\": true\n        }\n    ],\n    \"bidders\" : [\n        {\n            \"ID\":\"2e05b24b-f17d-4739-8e51-46afcc92677b\",\n        \t\"new\": false\n        }\n    ],\n    \"bidderGroups\" : [],\n    \"deliveryAddress\" : \"\",\n    \"note\" : \"Please place your bids with VAT included prices.\",\n    \"departmentID\" : \"8f41d06e-4322-4a69-a6d4-0acac37d64bf\",\n    \"autoTimeExtension\" : {\n        \"extendType\" : 1,\n        \"margin\" : 1,\n        \"duration\" : 1,\n        \"completionType\" : 2\n    },\n    \"bidChangeLimit\" : 1,\n    \"requestDeliveryDateForItems\" : \"2\",\n    \"visibleOffers\" : 1,\n    \"visibleRank\" : \"0\",\n    \"transportType\" : \"\",\n    \"paymentType\" : \"c1ab8cbb-1f86-497e-a391-0ea89155ad04\",\n    \"validUntilDate\" : \"2019-06-01\",\n    \"bidLimit\" : 0,\n    \"inviteMailBody\" : \"The content of the outgoing mail when the auction is published.\",\n    \"inviteMailTitle\" : \"inviteMailTitle\",\n    \"files\" : [],\n    \"autoStart\" : 0,\n    \"autoEnd\" : 1,\n    \"vatRate\" : 0,\n    \"bidderVatRate\" : 0,\n    \"itemFiles\" : 0,\n    \"bidChangeType\" : 2,\n    \"changeAmounts\" : [\n    \t{\n    \t\t\"price\" : \"100\"\n    \t},\n    \t{\n    \t\t\"price\" : \"200\"\n    \t},\n    \t{\n    \t\t\"price\" : \"500\"\n    \t},\n    \t{\n    \t\t\"price\" : \"1000\"\n    \t}\n\t]\n}"
+							"raw": "{\n    \"name\" : \"API GATEWAY EXAMPLE 1 (UPDATE)\",\n    \"type\" : 3,\n    \"date\" : \"2019-05-20\",\n    \"time\" : \"13:00\",\n    \"duration\":60,\n    \"budget\" : 0,\n    \"minimumChange\":0,\n    \"currency\" : \"TRY\",\n    \"agreementText\" : \"Agreement Text that bidders have to accept before participating in the auction.\",\n    \"deliveryRequired\" : 0,\n    \"deliveryDate\":\"2019-04-30\",\n    \"reminder\" : {\n        \"date\":\"2019-04-19\",\n        \"frequency\" : 24\n    },\n    \"publish\" : 1,\n    \"listPrice\": 1,\n    \"auctionItems\" : [\n        {\n            \"categoryID\" : \"acf4a180-ae23-4673-854b-4dc3811b467b\",\n            \"productID\" : \"c9b79f8f-7f6a-4689-8f42-0b4e8dbe5dda\",\n            \"amount\" : 10,\n            \"unit\" : \"Adet\",\n            \"description\" : \"\",\n            \"listPrice\" : 0\n        }\n    ],\n    \"auctionConditions\" : [\n        {\n            \"name\" : \"Condition 1\",\n            \"type\" : 3,\n            \"required\": true\n        }\n    ],\n    \"bidders\" : [\n        {\n            \"ID\":\"2e05b24b-f17d-4739-8e51-46afcc92677b\",\n        \t\"new\": false\n        }\n    ],\n    \"bidderGroups\" : [],\n    \"deliveryAddress\" : \"\",\n    \"note\" : \"Please place your bids with VAT included prices.\",\n    \"departmentID\" : \"8f41d06e-4322-4a69-a6d4-0acac37d64bf\",\n    \"autoTimeExtension\" : {\n        \"type\" : 1,\n        \"margin\" : 10,\n        \"duration\" : 10\n    },\n    \"bidChangeLimit\" : 1,\n    \"requestDeliveryDateForItems\" : 2,\n    \"visibleOffers\" : 1,\n    \"visibleRank\" : false,\n    \"transportType\" : \"\",\n    \"paymentType\" : \"\",\n    \"validUntilDate\" : \"2019-05-01\",\n    \"bidLimit\" : 0,\n    \"inviteMailBody\" : \"The content of the outgoing mail when the auction is published.\",\n    \"inviteMailTitle\" : \"inviteMailTitle\",\n    \"files\" : []\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/auctions/:auctionID",
@@ -1214,16 +1248,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -1260,117 +1291,6 @@
 			"description": "Folder for auctions"
 		},
 		{
-			"name": "bidder",
-			"item": [
-				{
-					"name": "",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
-								"key": "status",
-								"value": "{{status}}"
-							},
-							{
-								"key": "type",
-								"value": "{{type}}"
-							},
-							{
-								"key": "companyID",
-								"value": "{{companyID}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							},
-							{
-								"key": "range",
-								"value": "{{range}}"
-							}
-						],
-						"url": {
-							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidder/auctions",
-							"protocol": "https",
-							"host": [
-								"30fo61e8a3",
-								"execute-api",
-								"eu-west-1",
-								"amazonaws",
-								"com"
-							],
-							"path": [
-								"Test",
-								"bidder",
-								"auctions"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
-								"key": "companyID",
-								"value": "{{companyID}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							}
-						],
-						"url": {
-							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidder/auctions/:auctionID",
-							"protocol": "https",
-							"host": [
-								"30fo61e8a3",
-								"execute-api",
-								"eu-west-1",
-								"amazonaws",
-								"com"
-							],
-							"path": [
-								"Test",
-								"bidder",
-								"auctions",
-								":auctionID"
-							],
-							"variable": [
-								{
-									"key": "auctionID",
-									"value": "{{auctionID}}"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"description": "Folder for bidder"
-		},
-		{
 			"name": "bidders",
 			"item": [
 				{
@@ -1387,16 +1307,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -1432,21 +1349,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"email\" : \"mustafagultekin@jetract.com\",\n\t\"language\" : \"tr-TR\",\n\t\"categories\" : [\n\t\t{\n\t\t\t\"ID\" : \"d8ad9260-dafb-432b-872c-a9a1200e20e5\"\n\t\t},\n\t\t{\n\t\t\t\"ID\" : \"acf4a180-ae23-4673-854b-4dc3811b467b\"\n\t\t}\n\t],\n\t\"groups\" : [\n\t\t{\n\t\t\t\"ID\" : \"4a225894-4730-4ee8-9c90-9920655f9a78\"\n\t\t}\n\t]\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders",
@@ -1481,20 +1395,17 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
+								"key": "companyID",
+								"value": "{{companyID}}"
 							},
 							{
 								"key": "includeBidders",
 								"value": "{{includeBidders}}"
 							},
 							{
-								"key": "companyID",
-								"value": "{{companyID}}"
-							},
-							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -1531,21 +1442,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"name\" : \"Automotiv Bidder Group 1\",\n\t\"bidders\" : [\n\t\t{\n\t\t\t\"ID\" : \"2e05b24b-f17d-4739-8e51-46afcc92677b\"\n\t\t}\n\t]\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/groups",
@@ -1581,20 +1489,17 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
+								"key": "companyID",
+								"value": "{{companyID}}"
 							},
 							{
 								"key": "includeBidders",
 								"value": "{{includeBidders}}"
 							},
 							{
-								"key": "companyID",
-								"value": "{{companyID}}"
-							},
-							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -1638,21 +1543,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"name\" : \"Automotiv Bidder Group 1 (UPDATE)\",\n\t\"bidders\" : [\n\t\t{\n\t\t\t\"ID\" : \"2e05b24b-f17d-4739-8e51-46afcc92677b\"\n\t\t}\n\t]\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/groups/:groupID",
@@ -1695,16 +1597,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -1752,16 +1651,9 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
-								"key": "companyID",
-								"value": "{{companyID}}"
-							},
-							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -1804,21 +1696,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"firstname\" : \"Mustafa\",\n\t\"lastname\" : \"Gültekin\",\n\t\"mobile\" : {\n\t\t\"number\" : 5457187735,\n\t\t\"dialCode\" : 90,\n\t\t\"dialCountry\" : \"tr\"\n\t},\n\t\"language\" : \"tr-TR\",\n\t\"timeZone\" : \"3\",\n\t\"company\" : {\n\t\t\"countryID\" : \"8fb13a58-4492-47b9-a388-9d6a087b1b4b\",\n\t\t\"cityID\" : \"30d2a6fb-250e-4d40-98a8-da1583f7463d\",\n\t\t\"name\" : \"Gültekin Otomotiv\",\n\t\t\"taxOffice\" : \"Selçuklu\",\n\t\t\"taxNumber\" : 4760669863,\n\t\t\"numberOfWorkers\" : 14,\n\t\t\"phone\" : {\n\t\t\t\"number\" : 2129091993,\n\t\t\t\"dialCode\" : 90,\n\t\t\t\"dialCountry\" : \"tr\"\n\t\t},\n\t\t\"foundationYear\" : 2016,\n\t\t\"address\" : \"Kosova Mahallesi, Veysel Karani Cd. No:131/A, 42250 Selçuklu\"\n\t}\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/:bidderID",
@@ -1860,16 +1749,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -1901,6 +1787,52 @@
 						"description": "This function will delete a given Bidder from a given company."
 					},
 					"response": []
+				},
+				{
+					"name": "/bidders/bidding",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "companyID",
+								"value": "{{companyID}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{X-API-KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"type\" : \"2\",\n\t\"bidders\" : [\n\t\t{\n\t\t\t\"ID\" : \"d8ad9260-dafb-432b-872c-a9a1200e20e5\"\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/bidders/bidding",
+							"protocol": "https",
+							"host": [
+								"30fo61e8a3",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Test",
+								"bidders",
+								"bidding"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"description": "Folder for bidders"
@@ -1922,16 +1854,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -1967,21 +1896,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"parentID\" : \"d8ad9260-dafb-432b-872c-a9a1200e20e5\",\n\t\"name\" : \"BMW\"\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/categories",
@@ -2016,16 +1942,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
 								"key": "companyID",
 								"value": "{{companyID}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -2068,21 +1991,14 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
-								"key": "companyID",
-								"value": "{{companyID}}"
-							},
-							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"name\" : \"BMW\",\n\t\"unit\" : \"Adet\",\n\t\"code\" : \"000-001\"\n}"
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/categories/:categoryID",
@@ -2120,21 +2036,18 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
-								"key": "companyID",
-								"value": "{{companyID}}"
+								"key": "Content-Type",
+								"value": "application/json"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
-							"mode": "formdata",
-							"formdata": []
+							"mode": "raw",
+							"raw": ""
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/categories/:categoryID",
@@ -2178,25 +2091,28 @@
 								"value": "application/json"
 							},
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
-								"key": "companyID",
-								"value": "{{companyID}}"
+								"key": "content-type",
+								"value": "{{content-type}}"
 							},
 							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							},
-							{
-								"key": "content-type",
-								"value": "{{content-type}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "formdata",
-							"formdata": []
+							"formdata": [
+								{
+									"key": "company_uuid",
+									"value": "{{companyID}}",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file"
+								}
+							]
 						},
 						"url": {
 							"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/files",
@@ -2223,16 +2139,9 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "userID",
-								"value": "{{userID}}"
-							},
-							{
-								"key": "companyID",
-								"value": "{{companyID}}"
-							},
-							{
 								"key": "x-api-key",
-								"value": "{{x-api-key}}"
+								"value": "{{X-API-KEY}}",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -2262,38 +2171,6 @@
 				}
 			],
 			"description": "Folder for files"
-		},
-		{
-			"name": "",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					},
-					{
-						"key": "x-api-key",
-						"value": "{{x-api-key}}"
-					}
-				],
-				"url": {
-					"raw": "https://30fo61e8a3.execute-api.eu-west-1.amazonaws.com/Test/",
-					"protocol": "https",
-					"host": [
-						"30fo61e8a3",
-						"execute-api",
-						"eu-west-1",
-						"amazonaws",
-						"com"
-					],
-					"path": [
-						"Test",
-						""
-					]
-				}
-			},
-			"response": []
 		}
 	]
 }

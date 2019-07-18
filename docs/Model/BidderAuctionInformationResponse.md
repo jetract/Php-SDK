@@ -48,6 +48,7 @@ Name | Type | Description | Notes
 **elimination_date** | **string** | Bidder&#39;s eliminated date of YYYY-MM-DD HH:MM:SS format. &lt;br&gt;Only available in Reverse Sealed Auction types. | [optional] 
 **server_time** | **string** | The current time of the server. | [optional] 
 **time_control** | **bool** |  | [optional] 
+**can_bid** | **string** | Type of The Bidding Permission. &lt;br&gt;1: Can Bid. &lt;br&gt;2: Cannot Bid. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

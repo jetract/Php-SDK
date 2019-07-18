@@ -1,4 +1,4 @@
-# BidderGroupNewBidders
+# BiddingPermissionOfBidderBidders
 
 ## Properties
 Name | Type | Description | Notes

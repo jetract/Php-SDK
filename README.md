@@ -112,6 +112,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**auctionsBiddersAgreementsResetAuctionIDPost**](docs/Api/DefaultApi.md#auctionsbiddersagreementsresetauctionidpost) | **POST** /auctions/bidders/agreements/reset/{auctionID} | 
 *DefaultApi* | [**bidderAuctionsAuctionIDGet**](docs/Api/DefaultApi.md#bidderauctionsauctionidget) | **GET** /bidder/auctions/{auctionID} | 
 *DefaultApi* | [**bidderAuctionsGet**](docs/Api/DefaultApi.md#bidderauctionsget) | **GET** /bidder/auctions | 
+*DefaultApi* | [**biddersBiddingPost**](docs/Api/DefaultApi.md#biddersbiddingpost) | **POST** /bidders/bidding | 
 *DefaultApi* | [**rootGet**](docs/Api/DefaultApi.md#rootget) | **GET** / | 
 *FilesApi* | [**download**](docs/Api/FilesApi.md#download) | **GET** /files/{fileID} | 
 *FilesApi* | [**upload**](docs/Api/FilesApi.md#upload) | **POST** /files | 
@@ -150,6 +151,8 @@ Class | Method | HTTP request | Description
  - [AuctionItemResponse](docs/Model/AuctionItemResponse.md)
  - [AuctionItemResponseCategory](docs/Model/AuctionItemResponseCategory.md)
  - [AuctionItemResponseProduct](docs/Model/AuctionItemResponseProduct.md)
+ - [AuctionItemResponseWinnerBidder](docs/Model/AuctionItemResponseWinnerBidder.md)
+ - [AuctionItemResponseWinnerBidderCompany](docs/Model/AuctionItemResponseWinnerBidderCompany.md)
  - [AuctionNew](docs/Model/AuctionNew.md)
  - [AuctionNewAuctionConditions](docs/Model/AuctionNewAuctionConditions.md)
  - [AuctionNewAuctionItems](docs/Model/AuctionNewAuctionItems.md)
@@ -196,12 +199,13 @@ Class | Method | HTTP request | Description
  - [BidderAuctionsInformationResponseCompany](docs/Model/BidderAuctionsInformationResponseCompany.md)
  - [BidderAuctionsResponse](docs/Model/BidderAuctionsResponse.md)
  - [BidderGroupNew](docs/Model/BidderGroupNew.md)
- - [BidderGroupNewBidders](docs/Model/BidderGroupNewBidders.md)
  - [BidderGroupResponse](docs/Model/BidderGroupResponse.md)
  - [BidderGroupsResponse](docs/Model/BidderGroupsResponse.md)
  - [BidderNew](docs/Model/BidderNew.md)
  - [BidderNewCategories](docs/Model/BidderNewCategories.md)
  - [BidderNewGroups](docs/Model/BidderNewGroups.md)
+ - [BidderNewResponse](docs/Model/BidderNewResponse.md)
+ - [BidderNewResponseData](docs/Model/BidderNewResponseData.md)
  - [BidderResponse](docs/Model/BidderResponse.md)
  - [BidderResponseCompany](docs/Model/BidderResponseCompany.md)
  - [BidderResponseCompanyPhone](docs/Model/BidderResponseCompanyPhone.md)
@@ -211,6 +215,8 @@ Class | Method | HTTP request | Description
  - [BidderUpdateCompanyPhone](docs/Model/BidderUpdateCompanyPhone.md)
  - [BidderUpdateMobile](docs/Model/BidderUpdateMobile.md)
  - [BiddersResponse](docs/Model/BiddersResponse.md)
+ - [BiddingPermissionOfBidder](docs/Model/BiddingPermissionOfBidder.md)
+ - [BiddingPermissionOfBidderBidders](docs/Model/BiddingPermissionOfBidderBidders.md)
  - [CategoriesResponse](docs/Model/CategoriesResponse.md)
  - [CategoriesResponseData](docs/Model/CategoriesResponseData.md)
  - [CategoriesResponseProducts](docs/Model/CategoriesResponseProducts.md)
