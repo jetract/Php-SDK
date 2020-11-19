@@ -1,5 +1,6 @@
 {
-    "name": "/",
+    "name": "/JETRACT-API",
+    "version": "0.9.7",
     "description": "",
     "keywords": [
         "swagger",

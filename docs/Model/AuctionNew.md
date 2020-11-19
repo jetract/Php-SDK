@@ -35,7 +35,7 @@ Name | Type | Description | Notes
 **bid_limit** | **float** | Maximum/Minimum bid limit. Depending on the auction type it can be reverse or forward change. | [optional] 
 **invite_mail_body** | **string** | The content of the outgoing mail when the auction is published. | [optional] 
 **invite_mail_subject** | **string** | The subject of the outgoing mail when the auction is published. | 
-**files** | [**\Swagger\Client\Model\AuctionNewFiles[]**](AuctionNewFiles.md) | Attach files in the auction. | [optional] 
+**files** | [**\Swagger\Client\Model\ProcurementRequestNewFiles[]**](ProcurementRequestNewFiles.md) | Attach files in the auction. | [optional] 
 **auto_start** | **float** | Activate if you want the auction to start automatically. | [optional] 
 **auto_end** | **float** | Activate if you want the auction to end automatically. | [optional] 
 **vat_rate** | **float** | Activate if you want item-based vat rate. | [optional] 
@@ -43,6 +43,7 @@ Name | Type | Description | Notes
 **item_files** | **float** | Indicate if you are attaching files to items. | [optional] 
 **bid_change_type** | **float** | 1: Write bid amount.&lt;br&gt;2: Change amount button. | 
 **change_amounts** | [**\Swagger\Client\Model\AuctionNewChangeAmounts[]**](AuctionNewChangeAmounts.md) |  | [optional] 
+**time_type** | **float** | Auction time type. &lt;br&gt;1: Auction times are processed in minutes.&lt;br&gt;2: Auction times are processed in seconds. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
