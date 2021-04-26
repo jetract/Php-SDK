@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **offer_discount** | **float** | Discount given to offer price. | [optional] 
 **offer_discount_type** | **float** | Type of the offer discount.&lt;br&gt;1: Percent value. &lt;br&gt;2: Price value. | [optional] 
 **approval_process_status** | **float** | The status of the item to the approval process. Only used in after auction Flow Mechanisms. | [optional] 
-**item** | [**\Swagger\Client\Model\AuctionOfferItemResponseItem**](AuctionOfferItemResponseItem.md) |  | [optional] 
+**item** | **object** | The information of the auction item. | [optional] 
 **offer_vat_rate** | **float** | Vat rate given to item. | [optional] 
 **offer_vat_price** | **float** | Vat price given to item. | [optional] 
 

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **file_id** | **string** | ID of the item file. | [optional] 
 **sales_type** | **float** | Forward auction sales type. 1: Not Sold.&lt;br&gt;2: Sold. | [optional] 
 **current_price** | **float** |  | [optional] 
-**last_offers** | [**\Swagger\Client\Model\BidderAuctionItemResponseLastOffers**](BidderAuctionItemResponseLastOffers.md) |  | [optional] 
+**last_offers** | **object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

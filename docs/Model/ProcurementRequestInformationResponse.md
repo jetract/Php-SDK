@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **created_date** | **string** | Procurement request create date. YYYY-MM-DD HH:MM:SS format. | [optional] 
 **address** | [**\Swagger\Client\Model\ProcurementRequestAddressResponse**](ProcurementRequestAddressResponse.md) |  | [optional] 
 **items** | [**\Swagger\Client\Model\ProcurementRequestItemResponse[]**](ProcurementRequestItemResponse.md) | Items of the procurement request. | [optional] 
-**department** | [**\Swagger\Client\Model\ProcurementRequestsInformationResponseDepartment**](ProcurementRequestsInformationResponseDepartment.md) |  | [optional] 
-**creator** | [**\Swagger\Client\Model\ProcurementRequestsInformationResponseCreator**](ProcurementRequestsInformationResponseCreator.md) |  | [optional] 
-**requester** | [**\Swagger\Client\Model\ProcurementRequestsInformationResponseRequester**](ProcurementRequestsInformationResponseRequester.md) |  | [optional] 
+**department** | **object** | The procurement request department/project. | [optional] 
+**creator** | **object** | Information of the user who created the procurement request. | [optional] 
+**requester** | **object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

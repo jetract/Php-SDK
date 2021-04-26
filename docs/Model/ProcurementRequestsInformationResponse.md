@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **request_type** | **float** | The status of your purchase request. Types:&lt;br&gt;0:Waiting&lt;br&gt;1:Converted to Order&lt;br&gt;2:Converted to RFQ&lt;br&gt;3:Converted to Auction | [optional] 
 **delivery_date** | **string** | Delivery date in terms of YYYY-MM-DD HH:MM:SS format. | [optional] 
 **created_date** | **string** | Procurement request create date. YYYY-MM-DD HH:MM:SS format. | [optional] 
-**department** | [**\Swagger\Client\Model\ProcurementRequestsInformationResponseDepartment**](ProcurementRequestsInformationResponseDepartment.md) |  | [optional] 
-**creator** | [**\Swagger\Client\Model\ProcurementRequestsInformationResponseCreator**](ProcurementRequestsInformationResponseCreator.md) |  | [optional] 
-**requester** | [**\Swagger\Client\Model\ProcurementRequestsInformationResponseRequester**](ProcurementRequestsInformationResponseRequester.md) |  | [optional] 
+**department** | **object** | The procurement request department/project. | [optional] 
+**creator** | **object** | Information of the user who created the procurement request. | [optional] 
+**requester** | **object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
